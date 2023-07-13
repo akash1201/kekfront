@@ -1,0 +1,43 @@
+{
+    "id": "menu-data",
+    "section": "menu",
+    "menu": [
+        {
+            "id": "menu-1",
+            "text": "Home",
+            "link": "/"
+        },
+        {
+            "id": "menu-4",
+            "text": "Armory",
+            "link": "/weapons",
+            "submenu": [
+                {
+                    "id": "menu-41",
+                    "text": "Weapons",
+                    "link": "/weapons"
+                },
+                {
+                    "id": "menu-42",
+                    "text": "Characters",
+                    "link": "/characters"
+                },
+                {
+                    "id": "menu-43",
+                    "text": "Tacticals",
+                    "link": "/tacticals"
+                }
+            ]
+        },
+        {
+            "id": "menu-2",
+            "text": "FAQ",
+            "link": "/faq"
+        },
+        {
+            "id": "menu-3",
+            "text": "Contact",
+            "link": "/contact-us"
+        }
+    ]
+}

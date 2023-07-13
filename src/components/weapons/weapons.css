@@ -1,0 +1,82 @@
+.item {
+    align-items: center;
+    color: #FFF;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+  }
+  
+  .disabled-page {
+    color: #808e9b;
+  }
+  
+  .active {
+    border: solid 1px #808e9b;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: 40px;
+    color: #808e9b;
+  }
+  .next {
+    border-left: solid 1px #808e9b;
+    font-size: 14px;
+    right: 0;
+  }
+  
+  .pagination {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  .pagination-page {
+    font-weight: 700;
+  }
+  
+
+ .card-box:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -7px;
+    border: 2px solid #b8aa34;
+    background-color: rgb(214, 196, 196)!important;
+  }
+
+  .previous {
+    border-right: solid 1px #808e9b;
+    font-size: 14px;
+    left: 0;
+  }
+  .main-heading{
+    text-align: center!important;
+    margin-top: 20px!important;
+    margin-bottom: 15px!important;
+    font-size: 20px!important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+ 
+  }
+ 
+  .weapon-title:hover {
+    transition: all 0.2s ease-out;
+    font-size: 24px;
+  }
+  .weapon-title {
+    cursor:pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 18px;
+  }
+  
