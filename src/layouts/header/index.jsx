@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
-import React, { Fragment, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import Logo from "../../components/logo";
 import MainMenu from "../../components/menu/main-menu";
 import MobileNavMenu from "../../components/menu/mobile-menu";
@@ -39,11 +39,23 @@ const Header = ({ data }) => {
     }
     navigate("/login");
   };
-  window.addEventListener("click", (e) => {
-    if (e.target !== menuRef.current && e.target !== imgRef.current) {
-      setOpen(false);
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (e.target !== menuRef.current && e.target !== imgRef.current) {
+        setOpen(false);
+      }
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('click', handleClick);
     }
-  });
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('click', handleClick);
+      }
+    };
+  }, []);
 
   return (
     <header
@@ -87,7 +99,10 @@ const Header = ({ data }) => {
                         <li className="p-2 cursor-pointer rounded hover:bg-blue-100">
                           Setting
                         </li>
-                        <li className="p-2 cursor-pointer rounded hover:bg-blue-100" onClick={handleClick}>
+                        <li
+                          className="p-2 cursor-pointer rounded hover:bg-blue-100"
+                          onClick={handleClick}
+                        >
                           Logout
                         </li>
                       </ul>
