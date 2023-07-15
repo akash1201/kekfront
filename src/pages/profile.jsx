@@ -10,12 +10,10 @@ import { useSelector } from "react-redux";
 
 const Profile = ({ data, location, pageContext }) => {
   const { isLoggedIn } = useSelector((state) => state?.auth);
+  const globalContent = normalizedData(data?.allGeneral?.nodes || []);
   if (!isLoggedIn) {
     return navigate("/");
   }
-
-  const globalContent = normalizedData(data?.allGeneral?.nodes || []);
-  const content = normalizedData(data?.page.content || []);
   return (
     <Layout
       data={{
