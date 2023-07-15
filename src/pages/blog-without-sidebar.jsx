@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SEO from "@components/seo";
+import Seo from "@components/Seo";
 import Layout from "@layout";
 import BlogWithoutSidebarArea from "../container/blog/blog-without-sidebar";
 import PageBreadcrumb from "../components/pagebreadcrumb";
@@ -16,7 +16,7 @@ const BlogWithoutSidebarPage = ({ data, location, pageContext }) => {
                 ...globalContent["footer"],
             }}
         >
-            <SEO title="Blog Without Sidebar" pathname="/" />
+            <Seo title="Blog Without Sidebar" pathname="/" />
             <PageBreadcrumb
                 pageContext={pageContext}
                 location={location}

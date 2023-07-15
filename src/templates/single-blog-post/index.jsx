@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Layout from "@layout";
-import SEO from "@components/seo";
+import Seo from "@components/Seo";
 import PageBreadcrumb from "@components/pagebreadcrumb";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -27,7 +27,7 @@ const SinglePosts = ({ data, location, pageContext }) => {
                 ...globalContent["footer"],
             }}
         >
-            <SEO title={data?.article?.title} pathname="/" />
+            <Seo title={data?.article?.title} pathname="/" />
             <PageBreadcrumb
                 pageContext={pageContext}
                 location={location}

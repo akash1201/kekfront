@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SEO from "@components/seo";
+import Seo from "@components/Seo";
 import Layout from "@layout";
 import HeroArea from "../container/home/hero";
 import WelcomeFeaturesArea from "../container/home/welcome-features";
@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => {
             {
                 show && <SelectCharacter />
             }
-            <SEO title="Home" pathname="/" />
+            <Seo title="Home" pathname="/" />
             <HeroArea data={content["hero-section"]} />
             <WelcomeFeaturesArea data={content["welcome-section"]} />
             <WatchLiveStremingArea data={{ items: data.allMatch.nodes }} />

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { StaticImage } from "gatsby-plugin-image";
 import Button from "../../components/shared/button";
 import ReactLoading from "react-loading";
 const ProfileCont = ({ data }) => {
@@ -35,11 +34,6 @@ const ProfileCont = ({ data }) => {
               ) : (
                 <>
                   Update
-                  <StaticImage
-                    className="align-middle ml-3 transition-all group-hover:ml-5"
-                    src="../../../data/images/icons/arrrow-icon.webp"
-                    alt=""
-                  />
                 </>
               )}
             </Button>

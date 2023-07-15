@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SEO from "@components/seo";
+import Seo from "@components/Seo";
 import Layout from "@layout";
 import PageBreadcrumb from "../components/pagebreadcrumb";
 import { graphql } from "gatsby";
@@ -16,7 +16,7 @@ const BlogGridLeftSidebarPage = ({ data, location, pageContext }) => {
                 ...globalContent["footer"],
             }}
         >
-            <SEO title="Blog Left Sidebar" pathname="/" />
+            <Seo title="Blog Left Sidebar" pathname="/" />
             <PageBreadcrumb
                 pageContext={pageContext}
                 location={location}

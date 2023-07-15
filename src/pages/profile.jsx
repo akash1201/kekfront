@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SEO from "@components/seo";
+import Seo from "@components/Seo";
 import Layout from "@layout";
 import { graphql, navigate } from "gatsby";
 import { normalizedData } from "@utils/functions";
@@ -21,7 +21,7 @@ const Profile = ({ data, location, pageContext }) => {
         ...globalContent["footer"],
       }}
     >
-      <SEO title="Contact Us Page" pathname="/" />
+      <Seo title="Contact Us Page" pathname="/" />
       <PageBreadcrumb
         pageContext={pageContext}
         location={location}

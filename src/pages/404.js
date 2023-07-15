@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "@layout";
-import SEO from "@components/seo";
+import Seo from "@components/Seo";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { normalizedData } from "@utils/functions";
@@ -15,7 +15,7 @@ const NotFoundPage = ({ data }) => {
                 ...globalContent["footer"],
             }}
         >
-            <SEO title="404: Not found" pathname="/" />
+            <Seo title="404: Not found" pathname="/" />
             <div className="not-found pt-260">
                 <div className="container text-center">
                     <div className="error_title mb-10">

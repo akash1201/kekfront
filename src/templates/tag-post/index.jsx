@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SEO from "@components/seo";
+import Seo from "@components/Seo";
 import Layout from "@layout";
 import PageBreadcrumb from "@components/pagebreadcrumb";
 import BlogLeftSidebarArea from "../../container/blog/blog-left-sidebar";
@@ -16,7 +16,7 @@ const BlogTagPage = ({ data, location, pageContext }) => {
                 ...globalContent["footer"],
             }}
         >
-            <SEO title="Blog Tags" pathname="/" />
+            <Seo title="Blog Tags" pathname="/" />
             <PageBreadcrumb
                 pageContext={pageContext}
                 location={location}

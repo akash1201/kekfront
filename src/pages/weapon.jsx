@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Suspense } from "react";
 import PropTypes from "prop-types";
-import SEO from "@components/seo";
+import Seo from "@components/Seo";
 import Layout from "@layout";
 import PageBreadcrumb from "../components/pagebreadcrumb";
 import { normalizedData } from "@utils/functions";
@@ -21,7 +21,7 @@ const WeaponPage = ({ data, location, pageContext, weapon }) => {
                 ...globalContent["footer"],
             }} 
         >
-            <SEO title="Games Page" pathname="/" />
+            <Seo title="Games Page" pathname="/" />
             <PageBreadcrumb
                 pageContext={pageContext}
                 location={location}

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SEO from "@components/seo";
+import Seo from "@components/Seo";
 import Layout from "@layout";
 import { graphql } from "gatsby";
 import { normalizedData } from "@utils/functions";
@@ -17,7 +17,7 @@ const FAQPage = ({ data, location, pageContext }) => {
                 ...globalContent["footer"],
             }}
         >
-            <SEO title="FAQ Page" pathname="/" />
+            <Seo title="FAQ Page" pathname="/" />
             <PageBreadcrumb
                 pageContext={pageContext}
                 location={location}

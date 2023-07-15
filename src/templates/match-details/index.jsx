@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Layout from "@layout";
-import SEO from "@components/seo";
+import Seo from "@components/Seo";
 import PageBreadcrumb from "@components/pagebreadcrumb";
 import Swiper, { SwiperSlide } from "@components/shared/swiper";
 import { graphql, Link } from "gatsby";
@@ -30,7 +30,7 @@ const MatchDetails = ({ data, location, pageContext }) => {
                 ...globalContent["footer"],
             }}
         >
-            <SEO title="Match Details" pathname="/" />
+            <Seo title="Match Details" pathname="/" />
             <PageBreadcrumb
                 pageContext={pageContext}
                 location={location}
