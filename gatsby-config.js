@@ -1,13 +1,8 @@
 /* eslint-disable prettier/prettier */
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
 const config = require("./config/config");
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
+
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
@@ -31,7 +26,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
-        apiKey: process.env.API_KEY,
         trackingId: "G-WTT0CDWLRC",
         head: true,
         anonymize: true,

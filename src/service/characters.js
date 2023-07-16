@@ -1,6 +1,6 @@
 import { prepareHeaders } from "../utils/functions";
-//"https://api.goloadout.com"    "http://127.0.0.1:5000"
-let host = "https://api.goloadout.com";
+//"https://kekback-dev-build.onrender.com/"    "http://127.0.0.1:5000"
+let host = "https://kekback-dev-build.onrender.com";
 
 export const getCharacters = async () => {
   try {

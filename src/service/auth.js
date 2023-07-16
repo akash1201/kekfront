@@ -1,10 +1,22 @@
 import { prepareHeaders } from "../utils/functions";
-let host = "https://api.goloadout.com"
+let host = "https://kekback-dev-build.onrender.com";
 export const login = async (payload) => {
   try {
     const response = await fetch(`${host}/login`, {
       method: "POST",
-      headers:  prepareHeaders(),
+      headers: prepareHeaders(),
+      body: JSON.stringify(payload),
+    });
+    return response.json();
+  } catch (error) {
+    console.error(error);
+  }
+};
+export const updateUser = async (id, payload) => {
+  try {
+    const response = await fetch(`${host}/update/${id}`, {
+      method: "PUT",
+      headers: prepareHeaders(),
       body: JSON.stringify(payload),
     });
     return response.json();
@@ -17,7 +29,7 @@ export const signup = async (payload) => {
   try {
     const response = await fetch(`${host}/register`, {
       method: "POST",
-      headers:  prepareHeaders(),
+      headers: prepareHeaders(),
       body: JSON.stringify(payload),
     });
     return response.json();
@@ -30,7 +42,7 @@ export const facebookAuth = async (payload) => {
   try {
     const response = await fetch(`${host}/auth/facebook`, {
       method: "POST",
-      headers:  prepareHeaders(),
+      headers: prepareHeaders(),
       body: JSON.stringify(payload),
     });
     return response.json();

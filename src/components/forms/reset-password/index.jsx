@@ -38,7 +38,7 @@ const ResetPasswordForm = () => {
             old_password: values?.oldPassword,
             new_password: values?.newPassword
           };
-
+         console.log(payload)
           setLoading(true);
           resetPassword(payload)
           .then(response => {

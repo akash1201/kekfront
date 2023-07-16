@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Seo from "@components/seo";
+import Seo from "@components/Seo";      
 import Layout from "@layout";
 import PageBreadcrumb from "@components/pagebreadcrumb";
 import BlogLeftSidebarArea from "../../container/blog/blog-left-sidebar";

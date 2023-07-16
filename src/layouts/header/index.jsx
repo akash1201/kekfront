@@ -7,7 +7,7 @@ import MobileNavMenu from "../../components/menu/mobile-menu";
 import Button from "../../components/shared/button";
 import { useSticky } from "../../hooks";
 import { useSelector, useDispatch } from "react-redux";
-import { navigate } from "gatsby";
+import { Link, navigate } from "gatsby";
 import { LOGOUT } from "../../redux/types/authTypes";
 import { removeStorage } from "../../utils/functions";
 import Profile from "../../assets/images/profile.png";
@@ -46,17 +46,16 @@ const Header = ({ data }) => {
       }
     };
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('click', handleClick);
+    if (typeof window !== "undefined") {
+      window.addEventListener("click", handleClick);
     }
 
     return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('click', handleClick);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("click", handleClick);
       }
     };
   }, []);
-
   return (
     <header
       ref={headerRef}
@@ -91,10 +90,10 @@ const Header = ({ data }) => {
                     >
                       <ul>
                         <li className="p-2 cursor-pointer rounded hover:bg-blue-100">
-                          Profile
+                          <Link to="/profile">Profile</Link>
                         </li>
                         <li className="p-2 cursor-pointer rounded hover:bg-blue-100">
-                          Change Password
+                          <Link to="/reset-password">Change Password</Link>
                         </li>
                         <li className="p-2 cursor-pointer rounded hover:bg-blue-100">
                           Setting

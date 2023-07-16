@@ -1,19 +1,16 @@
 import React from "react";
+import ProfileCont from "../components/profile/ProfileCont";
 import PropTypes from "prop-types";
 import Seo from "@components/Seo";
 import Layout from "@layout";
-import { graphql, navigate } from "gatsby";
 import { normalizedData } from "@utils/functions";
+import { graphql } from "gatsby";
 import PageBreadcrumb from "../components/pagebreadcrumb";
-import ProfileCont from "../components/profile/ProfileCont";
-import { useSelector } from "react-redux";
 
-const Profile = ({ data, location, pageContext }) => {
-  const { isLoggedIn } = useSelector((state) => state?.auth);
+const PrivacyPage = ({ data, location, pageContext }) => {
+  const { slug } = pageContext;
+  console.log(data, "data", pageContext, slug);
   const globalContent = normalizedData(data?.allGeneral?.nodes || []);
-  if (!isLoggedIn) {
-    return navigate("/");
-  }
   return (
     <Layout
       data={{
@@ -21,7 +18,7 @@ const Profile = ({ data, location, pageContext }) => {
         ...globalContent["footer"],
       }}
     >
-      <Seo title="Contact Us Page" pathname="/" />
+      <Seo title="Privacy Policy Page" pathname="/" />
       <PageBreadcrumb
         pageContext={pageContext}
         location={location}
@@ -32,24 +29,17 @@ const Profile = ({ data, location, pageContext }) => {
   );
 };
 
-Profile.propTypes = {
+PrivacyPage.propTypes = {
   location: PropTypes.object,
   pageContext: PropTypes.object,
   data: PropTypes.shape({
     allGeneral: PropTypes.shape({
       nodes: PropTypes.arrayOf(PropTypes.shape({})),
     }),
-    page: PropTypes.shape({
-      content: PropTypes.arrayOf(PropTypes.shape({})),
-    }),
-    allMatch: PropTypes.shape({
-      nodes: PropTypes.arrayOf(PropTypes.shape({})),
-    }),
   }),
 };
-
 export const query = graphql`
-  query profilePageQuery {
+  query privacyPageQuery {
     allGeneral {
       nodes {
         section
@@ -62,12 +52,7 @@ export const query = graphql`
         }
       }
     }
-    page(title: { eq: "contactUsPage" }, pageType: { eq: innerpage }) {
-      content {
-        ...PageContentAll
-      }
-    }
   }
 `;
 
-export default Profile;
+export default PrivacyPage;
